@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReminderActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="408dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/dm_sans_bold"
+            android:gravity="center"
+            android:text="@string/reminders"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="21dp"
+            android:layout_height  ="28dp"
+            android:padding="6dp"
+            android:layout_marginStart="27dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="23dp"
+        android:background="@color/linecolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout"/>
+
+    <LinearLayout
+        android:id="@+id/togglegroup_morning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="@string/wake_up_notification"
+            android:textColor="@color/setting_textcolor"
+            android:textSize="18sp"
+            />
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_background="@color/linecolor"
+            app:sb_checked_color="@color/oranegshade"
+            app:sb_effect_duration="@integer/material_motion_duration_short_1"
+            app:sb_show_indicator="false"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/settimer_text_morning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/set_time_text_morning"
+        android:textColor="@color/recent_search"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/togglegroup_morning"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clock_morning"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="15sp"
+        android:backgroundTint="@color/alarm_color"
+        app:cardCornerRadius="90dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settimer_text_morning">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="49dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="37dp"
+                android:src="@drawable/ic_alarm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/linecolor" />
+
+            <TextView
+                android:id="@+id/alarm_time_text_morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginBottom="36dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="10:00 AM"
+                android:textColor="@color/linecolor"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="23dp"
+        android:background="@color/linecolor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock_morning"/>
+    <LinearLayout
+        android:id="@+id/togglegroup_evening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="@string/end_of_the_day_notification"
+            android:textColor="@color/setting_textcolor"
+            android:textSize="18sp"
+            />
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_evening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_background="@color/linecolor"
+            app:sb_checked_color="@color/oranegshade"
+            app:sb_effect_duration="@integer/material_motion_duration_short_1"
+            app:sb_show_indicator="false"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/settimer_text_evening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="@font/dm_sans"
+        android:text="@string/set_time_text_evening"
+        android:textColor="@color/recent_search"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/togglegroup_evening"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clock_evening"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="15sp"
+        android:backgroundTint="@color/alarm_color"
+        app:cardCornerRadius="90dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settimer_text_evening">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="49dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="37dp"
+                android:src="@drawable/ic_alarm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/linecolor" />
+
+            <TextView
+                android:id="@+id/alarm_time_text_evening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="41dp"
+                android:layout_marginBottom="36dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="10:00 AM"
+                android:textColor="@color/linecolor"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

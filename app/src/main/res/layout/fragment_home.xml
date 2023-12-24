@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.HomeFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/homecard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <TextView
+                        android:id="@+id/today_date"
+                        style="@style/homepagestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="42dp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:text="12 Aug , 2022"
+                        android:textSize="30dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/today_day"
+                        style="@style/homepagestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/dm_sans"
+                        android:gravity="top"
+                        android:text="Friday"
+                        android:textSize="19dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/today_date" />
+
+                    <TextView
+                        style="@style/homepagestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="22dp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:text="TRULY YOURS."
+                        android:textSize="28dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_white_roundcorner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/textChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/no_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginEnd="36dp"
+                            android:src="@drawable/img_no_data"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/nodata_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="26dp"
+                            android:text="No Quote For Today"
+                            android:textColor="@color/about_text_color"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:lineSpacingExtra="-8sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/no_data" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/alldata"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="40dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="32dp"
+                                android:src="@drawable/quotemarks_right"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/quote"
+                                android:tag="text_change_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="39dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="39dp"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:gravity="center_horizontal|top"
+                                android:textAppearance="@style/a_people_s_"
+                                android:textColor="@color/black"
+                                android:textSize="24sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                            <TextView
+                                android:id="@+id/writer"
+                                android:tag="text_change_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/background_orange_roundcorner_8dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center"
+                                android:text="Muhammad Ali "
+                                android:lineSpacingExtra="4sp"
+                                android:paddingStart="8dp"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="2dp"
+                                android:textAppearance="@style/john_h_clar"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+                            <TextView
+                                android:id="@+id/personal_pe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lineSpacingExtra="4sp"
+                                android:text="@string/personal_pe"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/writer" />
+
+                            <TextView
+                                android:id="@+id/pptext"
+                                android:tag="text_change_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="33dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginEnd="31dp"
+                                android:fontFamily="@font/dm_sans"
+                                android:gravity="top"
+                                android:lineSpacingExtra="2sp"
+
+                                android:textAppearance="@style/a_woman_giv"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/personal_pe" />
+                            <TextView
+                                android:id="@+id/bio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="14dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Bio"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/pptext" />
+
+                            <TextView
+                                android:id="@+id/biotext"
+                                android:tag="text_change_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="33dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginEnd="31dp"
+                                android:layout_marginBottom="21dp"
+                                android:fontFamily="@font/dm_sans"
+                                android:gravity="top"
+                                android:lineSpacingExtra="2sp"
+                                android:textAppearance="@style/a_woman_giv"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/bio"
+                                />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/thoughts_of_end_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginTop="22dp"
+                        android:background="@drawable/background_black_round_corner_4dp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:text="Thoughts To End The Day"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/thoughts_of_start_day"
+                        app:layout_constraintTop_toBottomOf="@+id/textChange" />
+
+                    <TextView
+                        android:id="@+id/thoughts_of_start_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="22dp"
+                        android:background="@drawable/background_black_round_corner_4dp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingTop="14dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="14dp"
+                        android:text="Thoughts To Start The Day"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@id/thoughts_of_end_day"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textChange" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+

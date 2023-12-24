@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Fragment.SearchFragment">
+
+        <TextView
+            android:id="@+id/titleSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/dm_sans_bold"
+            android:text="Search"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/groupsearch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/background_orange_roundcorner_6dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleSearch"
+            >
+
+            <EditText
+                android:id="@+id/searchtext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:backgroundTint="#F8F8F8"
+                android:fontFamily="@font/dm_sans"
+                android:hint="@string/search_text"
+                android:paddingStart="11dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:textColorHint="@color/hint_color"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/background_orange_roundcorner_6dp"
+                android:backgroundTint="@color/oranegshade"
+                android:padding="12sp"
+                android:src="@drawable/ic_search_btn"
+                app:layout_constraintEnd_toEndOf="@+id/editText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recentSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/recent_search"
+            android:textColor="@color/recent_search"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/groupsearch" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quoteRv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recentSearch"
+            tools:listitem="@layout/layout_quote_search" />
+
+        <ImageView
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="36dp"
+            android:src="@drawable/img_no_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recentSearch" />
+
+        <TextView
+            android:id="@+id/nodata_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="No Search results found"
+            android:textColor="@color/about_text_color"
+            android:textSize="20dp"
+            android:fontFamily="@font/dm_sans"
+            android:lineSpacingExtra="-8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/no_data" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

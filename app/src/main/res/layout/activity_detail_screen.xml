@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.DetailScreenActivity">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="408dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:text="@string/reminders"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="21dp"
+                        android:layout_height  ="28dp"
+                        android:padding="6dp"
+                        android:layout_marginStart="27dp"
+                        android:src="@drawable/ic_back"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/alldata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icon_search"
+                            android:layout_width="12dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_double_quote" />
+
+                        <TextView
+                            android:id="@+id/titleall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:textColor="@color/oranegshade"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="22dp"
+                        android:background="@color/linecolor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/quotecard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line2">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/quotemarks_right"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/quote"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="39dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="39dp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:gravity="center_horizontal|top"
+                            android:textAppearance="@style/a_people_s_"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                        <TextView
+                            android:id="@+id/writer"
+                            android:tag="text_change_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/background_orange_roundcorner_8dp"
+                            android:fontFamily="@font/dm_sans_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4sp"
+                            android:paddingStart="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="2dp"
+                            android:textAppearance="@style/john_h_clar"
+                            android:textStyle="italic"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+
+                        <LinearLayout
+                            android:id="@+id/quoteLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginEnd="28dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/writer">
+
+                            <ImageView
+                                android:id="@+id/icon"
+                                android:layout_width="12dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_personal_pp" />
+
+                            <TextView
+                                android:id="@+id/personal_pe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:layout_gravity="center"
+                                android:lineSpacingExtra="4sp"
+                                android:text="@string/personal_pe"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="22dp"
+                            android:background="@color/linecolor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/quoteLL" />
+
+
+
+                        <TextView
+                            android:id="@+id/pptext"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="31dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:gravity="top"
+                            android:lineSpacingExtra="2sp"
+                            android:textAppearance="@style/a_woman_giv"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/line1" />
+
+
+                        <LinearLayout
+                            android:id="@+id/bioLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="28dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pptext">
+
+                            <ImageView
+                                android:id="@+id/iconbio"
+                                android:layout_width="12dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_edit" />
+
+                            <TextView
+                                android:id="@+id/bio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Bio"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/line3"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="22dp"
+                            android:background="@color/linecolor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/bioLL" />
+
+
+                        <TextView
+                            android:id="@+id/biotext"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="31dp"
+                            android:layout_marginBottom="21dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:gravity="top"
+                            android:lineSpacingExtra="2sp"
+                            android:textAppearance="@style/a_woman_giv"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/line3" />
+
+
+
+                        <LinearLayout
+                            android:id="@+id/personalmorningLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginStart="32dp"
+                            android:visibility="gone"
+                            android:layout_marginEnd="28dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/biotext">
+
+                            <ImageView
+                                android:id="@+id/iconpersonalmorning"
+                                android:layout_width="12dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_morning" />
+
+                            <TextView
+                                android:id="@+id/personalMorningtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Thoughts To Start The Day"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="22dp"
+                            android:visibility="gone"
+                            android:background="@color/linecolor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/personalmorningLL" />
+
+
+                        <TextView
+                            android:id="@+id/personalmorning"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="31dp"
+                            android:layout_marginBottom="21dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:gravity="top"
+                            android:lineSpacingExtra="2sp"
+                            android:textAppearance="@style/a_woman_giv"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/line4" />
+
+
+
+                        <LinearLayout
+                            android:id="@+id/personaleveningLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="28dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/personalmorning">
+
+                            <ImageView
+                                android:id="@+id/iconpersonalevening"
+                                android:layout_width="12dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_evening" />
+
+                            <TextView
+                                android:id="@+id/personalEvenigntitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="22dp"
+                                android:fontFamily="@font/dm_sans_bold"
+                                android:gravity="center_horizontal|top"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Thoughts To End The Day"
+                                android:textAppearance="@style/personal_pe"
+                                android:textSize="20sp"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/line5"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="22dp"
+                            android:visibility="gone"
+                            android:background="@color/linecolor"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/personaleveningLL" />
+
+
+                        <TextView
+                            android:id="@+id/personalevening"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="33dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="31dp"
+                            android:layout_marginBottom="21dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:gravity="top"
+                            android:lineSpacingExtra="2sp"
+                            android:textAppearance="@style/a_woman_giv"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/line5" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/factcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line2">
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="50dp"
+                            android:layout_marginStart="31dp"
+                            android:layout_marginTop="25dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="90dp"
+                                android:background="@drawable/background_orange_roundcorner_8dp" />
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_weight="1"
+                                android:layout_marginStart="18dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="126dp"
+                                    android:layout_height="90dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/dm_sans_bold"
+                                    android:text="Did You Know ?"
+                                    android:textColor="@color/oranegshade"
+                                    android:textSize="33dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="59dp"
+                                    android:layout_height="82dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_do_you_know"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/fact"
+                            android:tag="text_change_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="70dp"
+                            android:layout_marginEnd="30dp"
+                            android:fontFamily="@font/dm_sans"
+                            android:text="In 1968, Shirley Chisholm became the first Black woman elected to the U.S. Congress. In '72, she ran for President, becoming the first Black person to do so, and the first woman to run as a Democrat. Even with three assassination attempts, she continued her bid, ending it after only winning only 28 primary delegates."
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

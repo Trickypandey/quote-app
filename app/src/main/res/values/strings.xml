@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Quote APP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="a_people_s_">A people\'s relationship to \ntheir heritage is the same as\nthe relationship of a child to\nits mother.</string>-->
+    <string name="john_h_clar">John. H. Clarke</string>
+    <string name="personal_pe">Personal Perspective</string>
+    <string name="a_woman_giv">A woman gives birth to her child and passes on her innate legacy. One day the child will ask questions, seeking to better understand their mother in order to better understand themselves. People without access to their mother have limited access to a part of themselves.</string>
+    <string name="title_activity_personal_thought">PersonalThoughtActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="personal_thoughts">Personal Thoughts</string>
+    <string name="daily_thought">Lorem ipsum dolor sit amet, consectetur dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="search_text">Type a keyword to search...</string>
+    <string name="recent_search">Recent Search</string>
+    <string name="quote1">A people\'s relationship to their heritage is the same as the relationship of a child to its mother.</string>
+    <string name="about">About</string>
+    <string name="reminders">Reminders</string>
+    <string name="export_data">Export Data</string>
+    <string name="appearance">Appearance</string>
+    <string name="passcode">Passcode</string>
+    <string name="support">Support</string>
+    <string name="wake_up_notification">Wake up notification</string>
+    <string name="set_time_text_morning">Set time for the morning for the app to notify</string>
+    <string name="end_of_the_day_notification">End of the day notification</string>
+    <string name="set_time_text_evening">Set time for the evening for the app to notify</string>
+    <string name="appearance_title">Change Apperance</string>
+    <string name="appearance_body">Are you sure you want to change the apperance?</string>
+    <string name="export_data_title">Export Data</string>
+    <string name="export_data_body">All the notes which are stored on the device will be exported to CSV file.</string>
+    <string name="some_error_occur">SOME ERROR OCCUR</string>
+    <string name="wont_be_add">Thoughts won’t be saved!</string>
+    <string name="dont_save_title">Your notes won’t be saved on back action!</string>
+    <string name="thoughts_change_successfully">Thought\'s Change Successfully</string>
+    <string name="tittle_morning">Thoughts To Start The Day</string>
+    <string name="title_evening">Thoughts To End The Day</string>
+    <string name="changes_dont_save">Changes won\'t be saved!</string>
+    <string name="changes_dont_save_body">Text Size  won’t be Change on back action!</string>
+
+
+</resources>

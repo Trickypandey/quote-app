@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/titleCalender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:text="Calender"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+<!--                <com.applandeo.materialcalendarview.CalendarView-->
+<!--                    android:id="@+id/calendarView"-->
+<!--                    android:layout_width="351dp"-->
+<!--                    android:layout_height="322dp"-->
+<!--                    android:layout_marginStart="35dp"-->
+<!--                    android:layout_marginEnd="35dp"-->
+<!--                    app:abbreviationsLabelsColor="@color/calendarlabel_color"-->
+<!--                    app:forwardButtonSrc="@drawable/calender_for_btn"-->
+<!--                    app:headerColor="@color/white"-->
+<!--                    app:headerLabelColor="@color/oranegshade"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/titleCalender"-->
+<!--                    app:previousButtonSrc="@drawable/calender_pre_btn" />-->
+<!--                abhi tak ka best-->
+
+                <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:textColor="@color/black"
+
+                    app:selectedItem_textColor="@color/white"
+                    app:todayItem_background="@drawable/circle_white_stroke_background"
+                    app:selectedItem_background="@drawable/background_circle_event"
+                    app:buttonLeft_drawable="@drawable/ic_back_orange"
+                    app:buttonRight_drawable="@drawable/ic_back_right_orange"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleCalender"
+                    />
+<!--                remember to change the margin top  to  8dp-->
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="22dp"
+                    android:background="@color/linecolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/calendarView" />
+
+                <ImageView
+                    android:id="@+id/no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginEnd="36dp"
+                    android:src="@drawable/img_no_data"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                <TextView
+                    android:id="@+id/nodata_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="No Quote For Selected Date"
+                    android:textColor="@color/about_text_color"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/dm_sans"
+                    android:lineSpacingExtra="-8sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/no_data" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/alldata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/line1">
+
+
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/dm_sans_bold"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="28dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_double_quote" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Quote"
+                            android:textColor="@color/oranegshade"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="22dp"
+                        android:background="@color/linecolor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/quotemarks_right"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line2" />
+
+                    <TextView
+                        android:id="@+id/quote"
+                        android:tag="text_change_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="39dp"
+                        android:fontFamily="@font/dm_sans_medium"
+                        android:gravity="center_horizontal|top"
+                        android:textAppearance="@style/a_people_s_"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:tag="text_change_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/background_orange_roundcorner_8dp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:text="Muhammad Ali "
+                        android:lineSpacingExtra="4sp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="2dp"
+                        android:textAppearance="@style/john_h_clar"
+                        android:textStyle="italic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/quotecalender"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingBottom="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title"
+                        tools:listitem="@layout/layout_quote_calendar" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
